@@ -31,7 +31,7 @@ npm install --save @sentry/react @sentry/tracing
 ```
 
 ## Modify the Sentry DSN
-In App.js and q1_validation.html, modify the DSN value to your DSN
+In src\App.js and srv\q1_validation.html, modify the DSN value to your DSN
 ```
 dsn: "https://XXXXXXX@sentry.io/123",
 ```
@@ -40,3 +40,5 @@ dsn: "https://XXXXXXX@sentry.io/123",
 ```
 npm start
 ```
+
+Open src\q1_validation.html in your browser and in a text editor to review validation steps for the first question

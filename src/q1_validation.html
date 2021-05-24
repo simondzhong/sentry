@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample Title</title>
+    <script
+    src="https://browser.sentry-cdn.com/6.2.5/bundle.min.js" 
+	integrity="sha384-+0tgGyP4idWu9/NA6Jbmnj3SApxIg65/GR1zo3qSieRNyzmmDQ/5a1Yu6mfmUw+v"
+    crossorigin="anonymous"
+    >
+    </script>
+    <script>
+      Sentry.init({
+        dsn: "https://XXXXXXX@sentry.io/123",
+		denyUrls: ['https://www.w3schools.com/js/myScript.js'],
+        release: "1.1"
+      });
+    </script>
+
+	<script src="https://www.w3schools.com/js/myScript.js"></script>
+    <!--<script src="https://somejslibrary.com/somelibrary.js" crossorigin="anonymous"></script>-->
+
+    <script>
+      var obj = {};
+      obj.invalidFunction(); // this error should always be reported to Sentry
+    </script>
+  </head>
+  <body>
+	<h2>External JavaScript taken from https://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto_external</h2>
+
+    <p id="demo2">If this html paragraph's id="demo", then no error would be thrown because the myFunction() from the external myScript.js would alter this text. However, I have changed the id to "demo2". <br \>Thus, myScript.js throws an Uncaught TypeError: Cannot set property 'innerHTML' of null at myFunction (myScript.js:2) <br \> Since I included https://www.w3schools.com/js/myScript.js to denyUrls, this error does not get sent to Sentry.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <p>(myFunction is stored in an external file called "myScript.js", which would normally alter the paragraph above to "Paragraph changed.")</p>
+
+  </body>
+</html>

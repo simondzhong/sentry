@@ -8,8 +8,12 @@ Navigate to https://nodejs.org/en/download/. Click the Windows Installer button 
 The Node.js installer includes the NPM package manager.
 
 ### Verify the installation:
-#### `node –v`
-#### `npm –v`
+```
+node –v
+```
+```
+npm –v
+```
 
 ## Clone the repository
 ```

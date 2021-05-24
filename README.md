@@ -2,7 +2,7 @@
 
 This project provides supporting data to Simon's response to Sentry's SE Technical Exercise 
 
-## Prerequisite 
+## Prerequisites
 ### Install Node.js and NPM
 Navigate to https://nodejs.org/en/download/. Click the Windows Installer button to download the latest default version.
 The Node.js installer includes the NPM package manager.
